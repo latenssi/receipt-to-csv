@@ -16,4 +16,4 @@ RUN pip install -r requirements.txt
 # copy project
 COPY . /usr/src/app/
 
-CMD ["gunicorn --bind 0.0.0.0:5000 server:app"]
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "server:app"]
